@@ -1,59 +1,54 @@
-# AirBnB clone - The Console
+# HBNB
 
-![N|Solid](https://brandemia.org/sites/default/files/airbnb_portada.jpg)
+This is the console /command interpreter for the Holberton Airbnb clone project. The console can be used to store objects in and retrieve objects from a JSON.
 
-![N|Solid](https://lh4.googleusercontent.com/yUzaviDgzDIq4-ZHp9k0YU5fsz0nOdekNRt1qHgp7Qdlw5BNfe6bETEf5ZWd-Vkn_m57BPx7HcDrwFK41ptLnQLTNipWmTAtiQwZL_8s97Nkzn94xP7XVKb3RnV0fx8QEZoxlkVd)
+### Supported classes:
+* BaseModel
+* User
+* State
+* City
+* Amenity
+* Place
+* Review
 
-# Description
+### Commands:
+* create - create an object
+* show - show an object (based on id)
+* destroy - destroy an object
+* all - show all objects, of one type or all types
+* quit/EOF - quit the console
+* help - see descriptions of commands
 
-We started this project, creating a command interpreter, where the main objective is to use the backend data through the console quickly and easily.
+To start, navigate to the project folder and enter `./console.py` in the shell.
 
-- Usage Module CMD.
-- Usage Module DateTime.
-- Usage Module Uuid.
-- Serialize and Deserialize the Files JSON.
-- Usage args/Kwargs
-- Usage Packges Python
+#### Create
+`create <class name>`
+Ex:
+`create BaseModel`
 
-## Install on PC
+#### Show
+`show <class name> <object id>`
+Ex:
+`show User my_id`
 
-    $ git clone https://github.com/camilooob/AirBnB_clone.git
-    $ cd AirBnB_clone
-    $ ./console.py
+#### Destroy
+`destroy <class name> <object id>`
+Ex:
+`destroy Place my_place_id`
 
-### COMMANDS CMD
+#### All
+`all` or `all <class name>`
+Ex:
+`all` or `all State`
 
-| Command | Simple Usage             |
-| ------- | ------------------------ |
-| Quit    | Quit the Prompt          |
-| Help    | Display help the console |
-| Create  | Create New object        |
-| Show    | Show the object          |
-| All     | Display All objects      |
-| Update  | Update objects           |
-| Destroy | Destroy Objects          |
+#### Quit
+`quit` or `EOF`
 
-# How to Use Console
+#### Help
+`help` or `help <command>`
+Ex:
+`help` or `help quit`
 
-1. Run program and show prompt with help command.
-   '''sh
-   \$ ./console.py
-   (hbnb) help
-
-   Documented commands (type help <topic>):
-
-   EOF help quit
-
-   (hbnb)
-   (hbnb) help quit
-   Quit command to exit the program
-
-   (hbnb)
-   (hbnb)
-   (hbnb) quit
-   PROMPT~>
-   '''
-
-# AUTHORS
-Daisy Mushabe <daisymushabe@gmail.com>
-
+Additionally, the console supports `<class name>.<command>(<parameters>)` syntax.
+Ex:
+`City.show(my_city_id)`

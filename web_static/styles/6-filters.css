@@ -1,84 +1,82 @@
-section.filters {
+.filters{
+    display: flex;
+    align-items: center;
     background-color: white;
     height: 70px;
     width: 100%;
-    border: 1px solid #DDDDDD;
+    border: solid 1px #DDDDDD;
     border-radius: 4px;
-    display: flex;
+    position: relative;
+    resize: vertical;
 }
-section.filters button {
+button{
+    position: absolute;
+    right: 30px;
     font-size: 18px;
-    background-color: #FF5A5F;
-    color: #FFFFFF;
+    background-color: #ff5a5f;
+    color: #ffffff;
     height: 48px;
     width: 20%;
     border: 0;
     border-radius: 4px;
-    margin: auto 30px;
+    cursor: pointer;
 }
-section.filters button:hover {
-    opacity: 90%;
+button:hover{
+    opacity: .9;
 }
-
-ul.popover{
-	list-style: none;
-	border: 1px solid #DDDDDD;
-	border-radius: 4px;
-	background-color: #FAFAFA;
-	margin-top: 0px;
-	padding-left: 0px;
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
-div.locations ul, div.amenities ul{
-	display: none;
-}
-section.filters div.locations:hover > ul, section.filters div.amenities:hover > ul{
-	display: block;
-    z-index: 999;
-}
-section.filters div.locations, section.filters div.amenities {
-	height: 100%;
+.locations {
+    height: 100%;
     width: 25%;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    border-right: 1px #dddddd solid;
 }
 
-section.filters div.locations {
-    border-right: 1px solid #DDDDDD;
+.amenities{
+    height: 100%;
+    width: 25%;
 }
-
-section.filters div.amenities {
-    margin-right: auto;
-}
-
-div.locations h3, div.amenities h3 {
+h3{
     font-weight: 600;
-    margin-bottom: 0px;
-    margin-left: 50px;
+    margin-top: 10px;
 }
-div.locations h4, div.amenities h4 {
+h4{
     font-weight: 400;
     font-size: 14px;
-    margin: 4px auto;
-    margin-left: 50px;
-    margin-bottom: 16px;
+    margin-top: -12px;
+}
+.filters div h4,
+.filters div h3{
+    margin-left: 35px;
 }
 
-div.locations ul.popover{
-	padding-bottom: 45px;
+.popover{
+    display:none;
+    position: absolute;
+    top: 56px;
+    padding-top: 5px;
+    padding-left: 19px;
+    background-color: #FAFAFA;
+    border: 1px #dddddd solid;
+    border-radius: 4px;
+    width: 23%;
 }
-div.locations ul.popover li h2 {
-	font-size: 18px;
-	padding-left: 35px;
-	margin-bottom: 4px;
-	margin-top: 0px;
+
+li{
+    list-style: none;
+    margin-bottom: 5px;
+    margin-top: 3px;
+    padding-left: 10px;
+    line-height: 23px;
 }
-div.locations ul.popover li h2.California {
-	margin-top: 30px;
+
+h2{
+    font-size: 16px;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: -15px;
+    padding: 0;
 }
-div.locations ul.popover li p, div.amenities ul.popover li p {
-	padding-left: 50px;
-	margin: 6px;
+
+div:hover > .popover{
+    display: block;
 }
